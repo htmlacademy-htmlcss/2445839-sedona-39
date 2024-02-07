@@ -129,19 +129,19 @@
           </fieldset>
           <fieldset class="hotels-price">
             <legend class="hotels-price-title">Стоимость, ₽:</legend>
-            <progress max="9000" value="7500"></progress>
+            <progress max="9000" value="5000"></progress>
           </fieldset>
 
           <fieldset class="hotels-button">
-            <button class="hotels-button-apply">Применить</button>
-            <button class="hotels-button-reset">Сбросить</button>
+            <button class="hotels-button-apply" type="button">Применить</button>
+            <button class="hotels-button-reset" type="button">Сбросить</button>
           </fieldset>
         </form>
       </section>
       <section class="list-hotel">
-        <h2 class="list-hotel-title">Найдено гостиниц: 38</h2>
+        <h2 class="list-hotel-title">Найдено гостиниц:<span class="list-hotel-namber">38</span></h2>
         <select name="hotel" aria-label="Сортировка">
-          <option value="cheap">Сначала дешевые</option>
+          <option value="cheap" selected>Сначала дешевые</option>
           <option value="business">Бизнес класс</option>
         </select>
 
@@ -149,21 +149,21 @@
           <ul>
             <li>
               <a href="#"
-                ><img src="#" alt="Расположение отелей по вертикали " /><span>
+                ><img src="#" alt="Расположение отелей по вертикали " /><span class="visually-hidden">
                   В три ряда</span
                 ></a
               >
             </li>
             <li>
               <a href="#"
-                ><img src="#" alt="Расположение отелей в один ряд " /><span>
+                ><img src="#" alt="Расположение отелей в один ряд " /><span class="visually-hidden">
                   В один ряд</span
                 ></a
               >
             </li>
             <li>
               <a href="#"
-                ><img src="#" alt="Расположение отелей по горизонтали " /><span>
+                ><img src="#" alt="Расположение отелей по горизонтали " /><span class="visually-hidden">
                   В строку</span
                 ></a
               >
@@ -188,7 +188,8 @@
             <button class="hotel-gallery-button" type="button">
               в избранное
             </button>
-            <p>Рейтинг: <span>8,5</span></p>
+            <p class="hotel-gallery-stars"><span class="visually-hidden">4 звезды</span></p>
+            <p class="hotel-gallery-text">Рейтинг: <span>8,5</span></p>
           </li>
           <li  class="hotel-gallery-item">
             <a class="hotel-gallery-link" href="#"
@@ -204,7 +205,8 @@
             <button class="hotel-gallery-button gallery-button-open " type="button">
               в избранном
             </button>
-            <p>Рейтинг: <span>9,2</span></p></li>
+            <p class="hotel-gallery-stars"><span class="visually-hidden">5 звезды</span></p>
+            <p  class="hotel-gallery-text">Рейтинг: <span>9,2</span></p></li>
 
           <li class="hotel-gallery-item">
             <a class="hotel-gallery-link" href="#"
@@ -220,7 +222,8 @@
             <button class="hotel-gallery-button" type="button">
               в избранное
             </button>
-            <p>Рейтинг: <span>6,9</span></p></li>
+            <p class="hotel-gallery-stars"><span class="visually-hidden">3 звезды</span></p>
+            <p class="hotel-gallery-text">Рейтинг: <span>6,9</span></p></li>
           <li class="hotel-gallery-item">
             <a class="hotel-gallery-link" href="#"
               ><img src="#" alt="GreenTree Inn"
@@ -235,7 +238,8 @@
             <button class="hotel-gallery-button" type="button">
               в избранное
             </button>
-            <p>Рейтинг: <span>5,0</span></p></li>
+            <p class="hotel-gallery-stars"><span class="visually-hidden">2 звезд</span></p>
+            <p class="hotel-gallery-text">Рейтинг: <span>5,0</span></p></li>
         </ol>
       </section>
 <ul class="pagination-hotel">
