@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Гостиницы Седоны</title>
   </head>
 
   <body>
-    <header class="header-sedona">
-      <a href="https://htmlacademy.ru/"><img src="#" alt="логотип sedona" /></a>
+    <header class="header-sedona" data-test="header">
+      <a href="index.html"><img src="#" alt="логотип sedona"></a>
 
       <nav class="header-sedona-navigation">
         <ul class="header-sedona-navigation-list">
           <li class="header-sedona-navigation-item">
-            <a class="header-sedona-navigation-link" href="/">Главная</a>
+            <a class="header-sedona-navigation-link" href="index.html">Главная</a>
           </li>
           <li class="header-sedona-navigation-item">
             <a class="header-sedona-navigation-link" href="#">О седоне</a>
@@ -29,9 +28,9 @@
             <a class="header-sedona-navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
           </li>
           <li class="header-sedona-navigation-item">
-            <a class="header-sedona-navigation-link" href="#"><span class="visually-hidden">В избранном: количество
+            <button class="header-sedona-navigation-link" href="#"><span class="visually-hidden">В избранном: количество
                 отелей</span>
-              <span class="header-sedona-navigation-namber">12</span></a>
+              <span class="header-sedona-navigation-namber">12</span></button>
           </li>
           <li class="header-sedona-navigation-item">
             <a class="header-sedona-navigation-link" href="#"><span class="visually-hidden">Хочу сюда!</span></a>
@@ -39,18 +38,18 @@
         </ul>
       </nav>
     </header>
-    <main class="sedona-hotels-main">
+    <main class="sedona-hotels-main" data-test="main">
       <h1 class="sedona-hotels-title">Гостиницы Седоны</h1>
-      <ol class="sedona-hotels-list">
+      <ul class="sedona-hotels-list">
         <li class="sedona-hotels-item">
-          <a class="sedona-hotels-link" href="/"><img src="#" alt="Главная" /></a>
+          <a class="sedona-hotels-link" href="index.html"><img src="#" alt="Главная"></a>
         </li>
         <li class="sedona-hotels-item">
-          <a class="sedona-hotels-link" aria-current="page">Гостиницы</a>
+          <a class="sedona-hotels-link" href="catalog.html" aria-current="page" aria-current="page">Гостиницы</a>
         </li>
-      </ol>
+      </ul>
 
-      <section class="sedona-hotels">
+      <section class="sedona-hotels" data-test="filter">
         <h2 class="visually-hidden">Список услуг с фильтрами</h2>
         <form class="sedona-hotels-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="hotels-checkbox-group">
@@ -68,7 +67,7 @@
               <li class="hotels-checkbox-item">
                 <label for="hotels-wi-fi" class="hotels-checkbox-label"><input id="hotels-wi-fi"
                     class="hotels-checkbox-input" type="checkbox" name="infrastructure-hotel"
-                    value="wi-fi" />Wi-Fi</label>
+                    value="wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
@@ -77,11 +76,11 @@
             <ul>
               <li class="hotels-radio-item">
                 <label for="radio-hotel" class="hotels-radio-label"><input id="radio-hotel" class="hotels-radio-input"
-                    type="radio" name="hotels" value="radio" checked />Гостиница</label>
+                    type="radio" name="hotels" value="radio" checked>Гостиница</label>
               </li>
               <li class="hotels-radio-item">
                 <label for="radio-motel" class="hotels-radio-label"><input id="radio-motel" class="hotels-radio-input"
-                    type="radio" name="hotels" value="motel" />Мотель</label>
+                    type="radio" name="hotels" value="motel">Мотель</label>
               </li>
               <li class="hotels-radio-item">
                 <label for="radio-apartments" class="hotels-radio-label"><input id="radio-apartments"
@@ -91,24 +90,19 @@
           </fieldset>
           <fieldset class="hotels-price">
             <legend class="hotels-price-title">Стоимость, ₽:</legend>
-            <label for="price-ot" class="hotels-price-price"
-              ><span class="hotels-price-min-max">от</span><input id="price-ot" type="number" value="0" />
+            <label for="price-ot" class="hotels-price-price"><span class="hotels-price-min-max">от</span><input
+                id="price-ot" type="number" value="0">
             </label>
 
             <label for="price-do" class="hotels-price-price">
               <span class="hotels-price-min-max">до</span><input id="price-do" type="number" value="9000" />
             </label>
-
-            <progress max="9000" value="5000"></progress>
           </fieldset>
-
-          <fieldset class="hotels-button">
-            <button class="hotels-button-apply" type="submit">Применить</button>
-            <button class="hotels-button-reset" type="reset">Сбросить</button>
-          </fieldset>
+          <button class="hotels-button-apply" type="submit">Применить</button>
+          <button class="hotels-button-reset" type="reset">Сбросить</button>
         </form>
       </section>
-      <section class="list-hotel">
+      <section class="list-hotel" data-test="catalog">
         <h2 class="list-hotel-title">
           Найдено гостиниц:<span class="list-hotel-namber">38</span>
         </h2>
@@ -137,9 +131,9 @@
       </section>
       <section class="hotel-gallery">
         <h2 class="visually-hidden">Рейтинг отелей</h2>
-        <ol class="hotel-gallery-list">
+        <ul class="hotel-gallery-list">
           <li class="hotel-gallery-item">
-            <a class="hotel-gallery-link" href="#"><img src="#" alt="Amara Resort & Spa" /></a>
+            <a class="hotel-gallery-link" href="#"><img src="#" alt="Amara Resort & Spa"></a>
             <a class="hotel-gallery-link" href="#">
               <h3 class="hotel-gallery-title" tabindex="-1">Amara Resort & Spa</h3>
             </a>
@@ -156,7 +150,7 @@
             <p class="hotel-gallery-text">Рейтинг: <span>8,5</span></p>
           </li>
           <li class="hotel-gallery-item">
-            <a class="hotel-gallery-link" href="#"><img src="#" alt="Villas at Poco Diablo" /></a>
+            <a class="hotel-gallery-link" href="#"><img src="#" alt="Villas at Poco Diablo"></a>
             <a class="hotel-gallery-link" href="#">
               <h3 class="hotel-gallery-title" tabindex="-1">Villas at Poco Diablo</h3>
             </a>
@@ -174,7 +168,7 @@
           </li>
 
           <li class="hotel-gallery-item">
-            <a class="hotel-gallery-link" href="#"><img src="#" alt="Desert Quail Inn" /></a>
+            <a class="hotel-gallery-link" href="#"><img src="#" alt="Desert Quail Inn"></a>
             <a class="hotel-gallery-link" href="#">
               <h3 class="hotel-gallery-title" tabindex="-1">Desert Quail Inn</h3>
             </a>
@@ -191,7 +185,7 @@
             <p class="hotel-gallery-text">Рейтинг: <span>6,9</span></p>
           </li>
           <li class="hotel-gallery-item">
-            <a class="hotel-gallery-link" href="#"><img src="#" alt="GreenTree Inn" /></a>
+            <a class="hotel-gallery-link" href="#"><img src="#" alt="GreenTree Inn"></a>
             <a class="hotel-gallery-link" href="#">
               <h3 class="hotel-gallery-title" tabindex="-1">GreenTree Inn</h3>
             </a>
@@ -207,7 +201,7 @@
             </p>
             <p class="hotel-gallery-text">Рейтинг: <span>5,0</span></p>
           </li>
-        </ol>
+        </ul>
       </section>
       <ul class="pagination-hotel">
         <li class="pagination-hotel-item">
@@ -221,10 +215,6 @@
         </li>
         <li class="pagination-hotel-item">
           <a class="pagination-hotel-link" href="#">4</a>
-
-
-
-
         </li>
         <li class="pagination-hotel-item">
           <span class="pagination-hotel-link">...</span>
@@ -234,7 +224,7 @@
           <a class="pagination-hotel-link" href="#">10</a>
         </li>
       </ul>
-      <aside class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-text">
           Только полезная информация и никакого спама, честное бойскаутское!
@@ -244,28 +234,28 @@
           <input id="subscribe-form" type="email" name="subscribe" value="email" placeholder="Ваш e-mail" required />
           <button class="subscribe-button" type="button">Подписаться</button>
         </form>
-      </aside>
+      </section>
     </main>
-    <footer class="sedona-footer">
+    <footer class="sedona-footer" data-test="footer">
       <ul class="sedona-social-list">
         <li class="sedona-social-item">
-          <a class="sedona-social-link" href="https://vk.com/htmlacademy"><img src="#" alt="Vkontakte" /></a>
+          <a class="sedona-social-link" href="https://vk.com/htmlacademy"><img src="#" alt="Vkontakte"></a>
         </li>
 
         <li class="sedona-social-item">
-          <a class="sedona-social-link" href="https://t.me/htmlacademy "><img src="#" alt="Telegram" /></a>
+          <a class="sedona-social-link" href="https://t.me/htmlacademy "><img src="#" alt="Telegram"></a>
         </li>
         <li class="sedona-social-item">
           <a class="sedona-social-link" href="https://www.youtube.com/user/htmlacademyru"><img src="#"
-              alt="Youtube" /></a>
+              alt="Youtube"></a>
         </li>
       </ul>
 
       <address class="sedona-phone">
         <a class="sedona-footer-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-
-        <a class="sedona-autor-link" href="https://htmlacademy.ru/"><img src="#" alt="сайт htmlacademy" /></a>
       </address>
+        <a class="sedona-autor-link" href="https://htmlacademy.ru/"><img src="#" alt="сайт htmlacademy"></a>
+
     </footer>
   </body>
 
