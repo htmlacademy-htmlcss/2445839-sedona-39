@@ -1,0 +1,308 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
+
+  font-display: swap;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #fff;
+  color: #333;
+}
+
+.header-sedona {
+  color: #000000;
+
+}
+
+.header-sedona-navigation-link {
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 20px;
+  color: inherit;
+  text-align: center;
+
+
+}
+
+.header-navigation-button {
+  background: #756157;
+  width: 160px;
+  height: 36px;
+
+
+}
+
+.header-button-link {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+
+
+}
+
+.greetings-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.greetings-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.greetings-sedona,
+.attractions-real-item,
+.attractions-devilis-bridge,
+.subscribe-button {
+  background: #82B3D3;
+  color: #fff;
+
+}
+
+.greetings-sedona {
+  background-image: url(../images/index-background.jpg);
+  width: 1200px;
+  height: 485px;
+
+}
+
+.attractions-real-town-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+
+
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 30px;
+  text-decoration-thickness: 2px;
+
+}
+
+.attractions-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+
+
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  text-underline-offset: 30px;
+  text-decoration-thickness: 2px;
+
+
+}
+
+.attractions-devilis-bridge-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+
+
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 30px;
+  text-decoration-thickness: 2px;
+}
+
+
+.sedona-come-title,
+.interested-title,
+.subscribe-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+
+.advantages-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+
+}
+
+.interested-text {
+  font-size: 22px;
+  line-height: 26px;
+
+}
+
+.interested-link-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  background-image: url(../images/subscribe.jpg);
+  width: 1200px;
+  height: 415px;
+  color: #fff;
+
+}
+
+.subscribe-button {
+  text-transform: uppercase;
+}
+
+.sedona-footer-tel {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+}
+
+/* каталог */
+.sedona-hotel-bacgraund {
+  background-image: url(../images/filtr.jpg);
+  /* background-repeat: no-repeat; */
+  width: 1200px;
+
+}
+
+.sedona-hotels-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+
+  color: #fff;
+
+}
+
+.sedona-hotels-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+
+}
+
+.sedona-hotels {
+  color: #fff;
+
+}
+
+.hotels-checkbox-title,
+.hotels-radio-title,
+.hotels-price-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+
+}
+
+.hotels-checkbox-item,
+.hotels-radio-item {
+  line-height: 23px;
+}
+
+.hotels-button-apply {
+  width: 191px;
+  height: 36px;
+  background-color: #82B3D3;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.hotels-button-reset {
+  background-color: #333;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.list-hotel-title {
+  text-transform: uppercase;
+}
+
+.hotel-gallery-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.hotel-gallery-link {
+  color: #000000;
+}
+
+
+.hotel-gallery-button-link,
+.hotel-gallery-button,
+.gallery-button-open,
+.hotel-gallery-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.hotel-gallery-button {
+  background: #82B3D3;
+}
+
+.hotel-gallery-button-link {
+  background-color: #756157;
+}
+
+.gallery-button-open {
+  background-color: #7DB54F;
+
+}
+
+.hotel-gallery-text {
+  color: #333;
+}
+
+
+.pagination-hotel-item {
+  width: 60px;
+  height: 60px;
+  background-color: #82B3D3;
+
+}
+
+.pagination-open {
+  width: 60px;
+  height: 60px;
+  background-color: #F2F2F2;
+
+}
+
+.pagination-hotel-link {
+  color: #fff;
+}
+
+.pagination-open-link {
+  color: #000000;
+
+}

@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Гостиницы Седоны</title>
   </head>
 
@@ -16,7 +17,7 @@
             <a class="header-sedona-navigation-link" href="index.html">Главная</a>
           </li>
           <li class="header-sedona-navigation-item">
-            <a class="header-sedona-navigation-link" href="#">О седоне</a>
+            <a class="header-sedona-navigation-link" href="#">О Седоне</a>
           </li>
           <li class="header-sedona-navigation-item open-navigation-item">
             <a class="header-sedona-navigation-link" aria-current="page" href="catalog.html">Гостиницы</a>
@@ -28,77 +29,83 @@
           </li>
           <li class="header-sedona-navigation-item">
             <button class="header-sedona-navigation-link"><span class="visually-hidden">В избранном: количество
-                отелей</span>
+                отелей </span>
               <span class="header-sedona-navigation-namber">12</span></button>
           </li>
-          <li class="header-sedona-navigation-item">
-            <a class="header-sedona-navigation-link" href="#"><span class="visually-hidden">Хочу сюда!</span></a>
+          <li class="header-sedona-navigation-item header-navigation-button ">
+            <a class="header-sedona-navigation-link header-button-link" href="#"><span class="visually-hidden">Хочу
+                сюда!</span></a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="sedona-hotels-main" data-test="main">
-      <h1 class="sedona-hotels-title">Гостиницы Седоны</h1>
-      <ul class="sedona-hotels-list">
-        <li class="sedona-hotels-item">
-          <a class="sedona-hotels-link" href="index.html"></a>
-        </li>
-        <li class="sedona-hotels-item">
-          <a class="sedona-hotels-link" href="catalog.html" aria-current="page">Гостиницы</a>
-        </li>
-      </ul>
-      <section class="sedona-hotels" data-test="filter">
-        <h2 class="visually-hidden">Список услуг с фильтрами</h2>
-        <form class="sedona-hotels-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="hotels-checkbox-group">
-            <legend class="hotels-checkbox-title">Инфраструктура:</legend>
-            <ul class="hotels-checkbox-list">
-              <li class="hotels-checkbox-item">
-                <label for="hotels-pool" class="hotels-checkbox-label"><input id="hotels-pool"
-                    class="hotels-checkbox-input" type="checkbox" name="infrastructure-hotel" value="pool"
-                    checked>Бассейн</label>
-              </li>
-              <li class="hotels-checkbox-item">
-                <label id="hotels-parking" class="hotels-checkbox-label"><input class="hotels-checkbox-input"
-                    type="checkbox" name="infrastructure-hotel" value="parking" checked>Парковка</label>
-              </li>
-              <li class="hotels-checkbox-item">
-                <label for="hotels-wi-fi" class="hotels-checkbox-label"><input id="hotels-wi-fi"
-                    class="hotels-checkbox-input" type="checkbox" name="infrastructure-hotel"
-                    value="wi-fi">Wi-Fi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="hotels-radio-group">
-            <legend class="hotels-radio-title">Тип жилья:</legend>
-            <ul>
-              <li class="hotels-radio-item">
-                <label for="radio-hotel" class="hotels-radio-label"><input id="radio-hotel" class="hotels-radio-input"
-                    type="radio" name="hotels" value="radio" checked>Гостиница</label>
-              </li>
-              <li class="hotels-radio-item">
-                <label for="radio-motel" class="hotels-radio-label"><input id="radio-motel" class="hotels-radio-input"
-                    type="radio" name="hotels" value="motel">Мотель</label>
-              </li>
-              <li class="hotels-radio-item">
-                <label for="radio-apartments" class="hotels-radio-label"><input id="radio-apartments"
-                    class="hotels-radio-input" type="radio" name="hotels" value="apartments">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="hotels-price">
-            <legend class="hotels-price-title">Стоимость, ₽:</legend>
-            <label for="price-ot" class="hotels-price-price"><span class="hotels-price-min-max">От</span><input
-                id="price-ot" type="number" value="0">
-            </label>
-            <label for="price-do" class="hotels-price-price">
-              <span class="hotels-price-min-max">До</span><input id="price-do" type="number" value="9000">
-            </label>
-          </fieldset>
-          <button class="hotels-button-apply" type="submit">Применить</button>
-          <button class="hotels-button-reset" type="reset">Сбросить</button>
-        </form>
-      </section>
+      <div class="sedona-hotel-bacgraund">
+        <h1 class="sedona-hotels-title">Гостиницы Седоны</h1>
+        <ul class="sedona-hotels-list">
+          <li class="sedona-hotels-item">
+            <a class="sedona-hotels-link" href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="sedona-hotels-item">
+            <a class="sedona-hotels-link" href="catalog.html" aria-current="page">Гостиницы</a>
+          </li>
+        </ul>
+        <section class="sedona-hotels" data-test="filter">
+          <h2 class="visually-hidden">Список услуг с фильтрами</h2>
+          <form class="sedona-hotels-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="hotels-checkbox-group">
+              <legend class="hotels-checkbox-title">Инфраструктура:</legend>
+              <ul class="hotels-checkbox-list">
+                <li class="hotels-checkbox-item">
+                  <label for="hotels-pool" class="hotels-checkbox-label"><input id="hotels-pool"
+                      class="hotels-checkbox-input" type="checkbox" name="infrastructure-hotel" value="pool"
+                      checked>Бассейн</label>
+                </li>
+                <li class="hotels-checkbox-item">
+                  <label id="hotels-parking" class="hotels-checkbox-label"><input class="hotels-checkbox-input"
+                      type="checkbox" name="infrastructure-hotel" value="parking" checked>Парковка</label>
+                </li>
+                <li class="hotels-checkbox-item">
+                  <label for="hotels-wi-fi" class="hotels-checkbox-label"><input id="hotels-wi-fi"
+                      class="hotels-checkbox-input" type="checkbox" name="infrastructure-hotel"
+                      value="wi-fi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="hotels-radio-group">
+              <legend class="hotels-radio-title">Тип жилья:</legend>
+              <ul>
+                <li class="hotels-radio-item">
+                  <label for="radio-hotel" class="hotels-radio-label"><input id="radio-hotel" class="hotels-radio-input"
+                      type="radio" name="hotels" value="radio" checked>Гостиница</label>
+                </li>
+                <li class="hotels-radio-item">
+                  <label for="radio-motel" class="hotels-radio-label"><input id="radio-motel" class="hotels-radio-input"
+                      type="radio" name="hotels" value="motel">Мотель</label>
+                </li>
+                <li class="hotels-radio-item">
+                  <label for="radio-apartments" class="hotels-radio-label"><input id="radio-apartments"
+                      class="hotels-radio-input" type="radio" name="hotels" value="apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="hotels-price">
+              <legend class="hotels-price-title">Стоимость, ₽:</legend>
+              <label for="price-ot" class="hotels-price-price"><span class="hotels-price-min-max">От</span><input
+                  id="price-ot" type="number" value="0">
+              </label>
+              <label for="price-do" class="hotels-price-price">
+                <span class="hotels-price-min-max">До</span><input id="price-do" type="number" value="9000">
+              </label>
+            </fieldset>
+            <button class="hotels-button-apply" type="submit">Применить</button>
+            <button class="hotels-button-reset" type="reset">Сбросить</button>
+          </form>
+        </section>
+
+      </div>
       <section class="list-hotel" data-test="catalog">
         <h2 class="list-hotel-title">
           Найдено гостиниц:<span class="list-hotel-namber">38</span>
@@ -199,8 +206,8 @@
         </ul>
       </section>
       <ul class="pagination-hotel">
-        <li class="pagination-hotel-item">
-          <a class="pagination-hotel-link pagination-open" href="#">1</a>
+        <li class="pagination-hotel-item pagination-open">
+          <a class="pagination-hotel-link pagination-open-link" href="#">1</a>
         </li>
         <li class="pagination-hotel-item">
           <a class="pagination-hotel-link" href="#">2</a>
