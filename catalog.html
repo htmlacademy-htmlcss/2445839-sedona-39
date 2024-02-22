@@ -43,72 +43,74 @@
         </nav>
       </header>
       <main class="main-container sedona-hotels-main" data-test="main">
-        <div class="sedona-hotel-crumbs">
-          <h1 class="sedona-hotels-title">Гостиницы Седоны</h1>
-          <ul class="sedona-hotels-list">
-            <li class="sedona-hotels-item">
-              <a class="sedona-hotels-link" href="index.html">
-                <span class="visually-hidden">Главная</span>
-              </a>
-            </li>
-            <li class="sedona-hotels-item">
-              <a class="sedona-hotels-link" href="catalog.html" aria-current="page">Гостиницы</a>
-            </li>
-          </ul>
+        <div class="sedona-hotel-images">
+          <div class="sedona-hotel-crumbs">
+            <h1 class="sedona-hotels-title">Гостиницы Седоны</h1>
+            <ul class="sedona-hotels-list">
+              <li class="sedona-hotels-item">
+                <a class="sedona-hotels-link" href="index.html">
+                  <span class="visually-hidden">Главная</span>
+                </a>
+              </li>
+              <li class="sedona-hotels-item">
+                <a class="sedona-hotels-link" href="catalog.html" aria-current="page">Гостиницы</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sedona-wrapper">
+            <section class="sedona-hotels" data-test="filter">
+              <h2 class="visually-hidden">Список услуг с фильтрами</h2>
+              <form class="sedona-hotels-form" action="https://echo.htmlacademy.ru/" method="get">
+                <fieldset class="hotels-checkbox-group">
+                  <legend class="hotels-checkbox-title">Инфраструктура:</legend>
+                  <ul class="hotels-checkbox-list">
+                    <li class="hotels-checkbox-item">
+                      <label class="hotels-checkbox-label" for="hotels-pool"><input class="hotels-checkbox-input"
+                          id="hotels-pool" type="checkbox" name="infrastructure-hotel" value="pool"
+                          checked>Бассейн</label>
+                    </li>
+                    <li class="hotels-checkbox-item">
+                      <label class="hotels-checkbox-label" id="hotels-parking"><input class="hotels-checkbox-input"
+                          type="checkbox" name="infrastructure-hotel" value="parking" checked>Парковка</label>
+                    </li>
+                    <li class="hotels-checkbox-item">
+                      <label class="hotels-checkbox-label" for="hotels-wi-fi"><input class="hotels-checkbox-input"
+                          id="hotels-wi-fi" type="checkbox" name="infrastructure-hotel" value="wi-fi">Wi-Fi</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="hotels-radio-group">
+                  <legend class="hotels-radio-title">Тип жилья:</legend>
+                  <ul class="hotels-radio-list">
+                    <li class="hotels-radio-item">
+                      <label class="hotels-radio-label" for="radio-hotel"><input class="hotels-radio-input"
+                          id="radio-hotel" type="radio" name="hotels" value="radio" checked>Гостиница</label>
+                    </li>
+                    <li class="hotels-radio-item">
+                      <label class="hotels-radio-label" for="radio-motel"><input class="hotels-radio-input"
+                          id="radio-motel" type="radio" name="hotels" value="motel">Мотель</label>
+                    </li>
+                    <li class="hotels-radio-item">
+                      <label class="hotels-radio-label" for="radio-apartments"><input class="hotels-radio-input"
+                          id="radio-apartments" type="radio" name="hotels" value="apartments">Апартаменты</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="hotels-price">
+                  <legend class="hotels-price-title">Стоимость, ₽:</legend>
+                  <label class="hotels-price-price" for="price-ot"><span class="hotels-price-min-max">От</span><input
+                      id="price-ot" type="number" value="0">
+                  </label>
+                  <label class="hotels-price-price" for="price-do">
+                    <span class="hotels-price-min-max">До</span><input id="price-do" type="number" value="9000">
+                  </label>
+                </fieldset>
+                <button class="hotels-button-apply" type="submit">Применить</button>
+                <button class="hotels-button-reset" type="reset">Сбросить</button>
+              </form>
+            </section>
+          </div>
         </div>
-        <div class="sedona-wrapper">
-          <section class="sedona-hotels" data-test="filter">
-            <h2 class="visually-hidden">Список услуг с фильтрами</h2>
-            <form class="sedona-hotels-form" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="hotels-checkbox-group">
-                <legend class="hotels-checkbox-title">Инфраструктура:</legend>
-                <ul class="hotels-checkbox-list">
-                  <li class="hotels-checkbox-item">
-                    <label class="hotels-checkbox-label" for="hotels-pool"><input class="hotels-checkbox-input"
-                        id="hotels-pool" type="checkbox" name="infrastructure-hotel" value="pool"
-                        checked>Бассейн</label>
-                  </li>
-                  <li class="hotels-checkbox-item">
-                    <label class="hotels-checkbox-label" id="hotels-parking"><input class="hotels-checkbox-input"
-                        type="checkbox" name="infrastructure-hotel" value="parking" checked>Парковка</label>
-                  </li>
-                  <li class="hotels-checkbox-item">
-                    <label class="hotels-checkbox-label" for="hotels-wi-fi"><input class="hotels-checkbox-input"
-                        id="hotels-wi-fi" type="checkbox" name="infrastructure-hotel" value="wi-fi">Wi-Fi</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="hotels-radio-group">
-                <legend class="hotels-radio-title">Тип жилья:</legend>
-                <ul class="hotels-radio-list">
-                  <li class="hotels-radio-item">
-                    <label class="hotels-radio-label" for="radio-hotel"><input class="hotels-radio-input"
-                        id="radio-hotel" type="radio" name="hotels" value="radio" checked>Гостиница</label>
-                  </li>
-                  <li class="hotels-radio-item">
-                    <label class="hotels-radio-label" for="radio-motel"><input class="hotels-radio-input"
-                        id="radio-motel" type="radio" name="hotels" value="motel">Мотель</label>
-                  </li>
-                  <li class="hotels-radio-item">
-                    <label class="hotels-radio-label" for="radio-apartments"><input class="hotels-radio-input"
-                        id="radio-apartments" type="radio" name="hotels" value="apartments">Апартаменты</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="hotels-price">
-                <legend class="hotels-price-title">Стоимость, ₽:</legend>
-                <label class="hotels-price-price" for="price-ot"><span class="hotels-price-min-max">От</span><input
-                    id="price-ot" type="number" value="0">
-                </label>
-                <label class="hotels-price-price" for="price-do">
-                  <span class="hotels-price-min-max">До</span><input id="price-do" type="number" value="9000">
-                </label>
-              </fieldset>
-              <button class="hotels-button-apply" type="submit">Применить</button>
-              <button class="hotels-button-reset" type="reset">Сбросить</button>
-            </form>
-        </div>
-        </section>
         <section class="list-hotel" data-test="catalog">
           <h2 class="list-hotel-title">
             Найдено гостиниц:<span class="list-hotel-namber">38</span>
