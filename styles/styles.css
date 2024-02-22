@@ -405,16 +405,6 @@ body {
 .sedona-hotels-main {
   margin: 0 auto;
 }
-
-.sedona-hotel-crumbs {
-  display: flex;
-  flex-direction: column;
-}
-
-.sedona-hotels {
-  color: #ffffff;
-}
-
 .sedona-hotel-images{
   background-color: #ffffff;
   color: #333333;
@@ -423,7 +413,14 @@ body {
   background-repeat: no-repeat;
   min-height: 412px;
 }
+.sedona-hotel-crumbs {
+  display: flex;
+  flex-direction: column;
+}
 
+.sedona-hotels {
+  color: #ffffff;
+}
 .sedona-hotels-title {
   font-size: 60px;
   font-weight: 700;
