@@ -874,9 +874,13 @@ margin-left: auto;
   display: flex;
   list-style: none;
   gap: 8px;
+  margin: 40px 0 60px;
+  padding: 0 70px;
 }
 
 .pagination-hotel-link {
+  box-sizing: border-box;
+  display: block;
   min-width: 60px;
   height: 60px;
   background-color: #82b3d3;
