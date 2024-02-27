@@ -11,7 +11,7 @@
     <div class="container">
       <!-- хедер -->
       <header class="header-sedona" data-test="header">
-        <a href="index.html"><img src="images/logo.svg" width="140" height="70" alt="логотип sedona"></a>
+        <a class="header-sedona-logotip" href="index.html"><img src="images/logo.svg" width="140" height="70" alt="логотип sedona"></a>
         <nav class="header-sedona-navigation">
           <ul class="header-sedona-navigation-list">
             <li class="header-sedona-navigation-item open-navigation-item">
@@ -26,23 +26,25 @@
           </ul>
           <ul class="header-sedona-navigation-list header-sedona-icon">
             <li class="header-sedona-navigation-item">
-              <a class="header-sedona-navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+              <a class="header-sedona-navigation-link header-sedona-navigation-button" href="#"><span
+                  class="visually-hidden">Поиск</span></a>
             </li>
             <li class="header-sedona-navigation-item">
-              <button class="header-sedona-navigation-link" type="button"><span class="visually-hidden">В избранном:
+              <button class="header-sedona-navigation-link header-sedona-navigation-button" type="button"><span
+                  class="visually-hidden">В избранном:
                   количество
                   отелей </span>
                 <span class="header-sedona-navigation-namber">12</span></button>
             </li>
             <li class="header-sedona-navigation-item header-navigation-button">
-              <button class="header-sedona-navigation-link header-button-link" type="button"><span
-                  class="header-navigation-text">Хочу
+              <button class="header-sedona-navigation-link header-sedona-navigation-button header-button-link"
+                type="button"><span class="header-navigation-text">Хочу
                   сюда!</span></button>
             </li>
           </ul>
         </nav>
       </header>
-      <main class="main-container main-sedona " data-test="main">
+      <main class="main-container main-sedona" data-test="main">
         <section class="greetings-sedona">
           <h1 class="visually-hidden">Седона город в Аризоне</h1>
           <img class="mein-sedona-logo" src="images/welcome.svg" width="458" height="352"
@@ -62,7 +64,7 @@
             <li class="attractions-item attractions-real-images">
               <div class="attraction-text-wrapper text-wrapper-img">
                 <h3 class="attractions-title attractions-real-town-title">Настоящий городок</h3>
-                <p class="attractions-real-town-text">
+                <p class="attractions-text attractions-real-town-text">
                   Седона — не аттракцион для туристов, там течёт своя жизнь
                 </p>
               </div>
@@ -87,7 +89,7 @@
             </li>
             <li class="attractions-item attractions-tourists">
               <div class="attraction-text-wrapper">
-                <h3 class="attractions-title ">Мало<br>туристов</h3>
+                <h3 class="attractions-title">Мало<br>туристов</h3>
                 <p class="attractions-text">
                   Большинство едет в Гранд Каньон и толпится там
                 </p>
@@ -98,7 +100,7 @@
                 <h3 class="attractions-title attractions-devilis-bridge-title">
                   Там есть мост дьявола
                 </h3>
-                <p class="attractions-devilis-bridge-text ">
+                <p class="attractions-text attractions-devilis-bridge-text ">
                   Да, по нему можно пройти! Если вы осмелитесь, разумеется
                 </p>
               </div>
@@ -152,11 +154,13 @@
           <a class="interested-link-button" href="#">Поиск гостиницы в Седоне</a>
         </section>
         <section class="subscribe subscribe-images" data-test="subscribe">
-          <h2 class="subscribe-title ">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text ">
-            Только полезная информация и никакого спама, честное бойскаутское!
-          </p>
-          <form action="https://echo.htmlacademy.ru/" method="post">
+          <div class="subscribe-wrapp">
+            <h2 class="subscribe-title ">Подпишитесь на рассылку</h2>
+            <p class="subscribe-text ">
+              Только полезная информация и никакого спама, честное бойскаутское!
+            </p>
+          </div>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-form">Укажите ваш email</label>
             <input class="subscribe-input" id="subscribe-form" type="email" name="user email" placeholder="Ваш e-mail"
               required>
@@ -166,16 +170,16 @@
       </main>
       <footer class="sedona-footer" data-test="footer">
         <ul class="sedona-social-list">
-          <li class="sedona-social-item">
-            <a class="sedona-social-link" href="https://vk.com/htmlacademy">
+          <li class="sedona-social-item sedona-social-item-vk">
+            <a class="sedona-social-link-vk " href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Vkontakte</span></a>
           </li>
-          <li class="sedona-social-item">
-            <a class="sedona-social-link" href="https://t.me/htmlacademy">
+          <li class="sedona-social-item sedona-social-item-telegram">
+            <a class="sedona-social-link-telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span></a>
           </li>
-          <li class="sedona-social-item">
-            <a class="sedona-social-link" href="https://www.youtube.com/user/htmlacademyru">
+          <li class="sedona-social-item sedona-social-item-youtube">
+            <a class="sedona-social-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span></a>
           </li>
         </ul>
