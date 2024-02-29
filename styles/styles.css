@@ -419,13 +419,14 @@ body {
 
 .subscribe {
   background-color: #ffffff;
-  width: 684px;
   color: #333333;
   text-align: center;
   margin: 0 auto;
   padding: 100px 0;
 }
-
+.subscribe-width{
+  width: 684px;
+}
 .subscribe-images {
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
@@ -438,6 +439,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   flex-wrap: wrap;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
