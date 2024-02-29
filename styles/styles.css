@@ -346,7 +346,10 @@ body {
   padding: 81px 85px;
 
 }
-
+.advantages-wrapper{
+  width: 230px;
+  text-align: center;
+}
 .advantages-title {
   font-size: 24px;
   font-weight: 700;
