@@ -349,6 +349,7 @@ body {
 .advantages-wrapper{
   width: 230px;
   text-align: center;
+  margin-top: 102px;
 }
 .advantages-title {
   font-size: 24px;
@@ -357,13 +358,15 @@ body {
   flex-wrap: wrap;
   text-transform: uppercase;
   color: #000000;
-  margin-top: 102px;
+  margin-top: 0;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .advantages-text {
   margin: 0;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .interested-title {
