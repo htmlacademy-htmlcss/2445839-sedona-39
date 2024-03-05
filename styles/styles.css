@@ -669,12 +669,14 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  margin-bottom: 32px;
 }
 
 .hotels-radio-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  margin-bottom: 32px;
 }
 
 .hotels-price-title {
@@ -688,13 +690,17 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 16px;
 }
-
+.hotels-checkbox-item:last-child, .hotels-radio-item:last-child {
+margin-bottom: 0;
+}
 .hotels-radio-item {
   line-height: 23px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 16px;
 }
 
 .hotels-button-wrapper {
@@ -709,6 +715,7 @@ body {
   height: 36px;
   border-radius: 4px;
   background-color: #82b3d3;
+  margin-bottom: 32px;
 }
 
 .button-apply-text {
