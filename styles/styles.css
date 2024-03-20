@@ -90,8 +90,6 @@ body {
   line-height: 24px;
   list-style: none;
   color: #000000;
-
-  padding: 0;
 }
 
 .header-sedona-icon {
@@ -126,33 +124,31 @@ body {
   background-color: #756257;
 }
 
-/* .header-sedona-navigation-link:disabled{
-  background-color: #e5e5e5;
-  opacity: 0.5;
-  cursor: auto;
-}
-.header-sedona-navigation-link disabled:hover{
-  cursor: none;
-} */
-.header-navigation-item-icon {
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.navigation-search-icon {
-  background-image: url("../images/search.svg");
+.navigation-search-link svg,
+.navigation-heart-buttom svg {
+  position: absolute;
+  top: 23px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
 }
 
 .navigation-heart-icon {
-  background-image: url("../images/heart.svg");
   position: relative;
 }
 
 .navigation-search-link,
-.navigation-search-buttom {
+.navigation-heart-buttom {
   width: 44px;
   min-height: 64px;
   cursor: pointer;
+}
+
+.navigation-search-link,
+.navigation-heart-buttom {
+  position: relative;
+  fill: #000000;
 }
 
 .header-sedona-navigation-namber {
@@ -190,18 +186,38 @@ body {
   cursor: pointer;
 }
 
-.header-sedona-navigation-button:visited {
+
+.header-sedona-navigation-link:hover {
+  background-color: #615048;
+  opacity: 0.8;
+  color: #ffffff;
+}
+
+.navigation-search-link:hover,
+.navigation-heart-buttom:hover {
+  fill: #ffffff;
+}
+
+.header-sedona-navigation-button:hover,
+.header-sedona-navigation-button:focus-visible {
   background-color: #615048;
 }
 
-.header-sedona-navigation-button:hover {
-  background-color: #615048;
-}
-.header-sedona-navigation-link:active,
 .header-sedona-navigation-button:active {
   background-color: #756157;
   opacity: 0.3;
-  color: #ffffff;
+}
+
+.header-sedona-navigation-button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
+}
+
+.header-sedona-navigation-button disabled:hover,
+.header-sedona-navigation-button disabled:focus-visible,
+.header-sedona-navigation-button disabled:active {
+  background-color: #e5e5e5;
+  cursor: default;
 }
 
 /* основное содержание */
@@ -230,14 +246,12 @@ body {
 }
 
 .greeting-wrapper {
-  /*  */
   width: 651px;
   margin: 0 auto;
   padding: 69px 0 90px;
 }
 
 .greetings-title {
-  /*  */
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -248,7 +262,6 @@ body {
 }
 
 .greetings-text {
-  /*  */
   font-size: 22px;
   line-height: 26px;
   min-height: 26px;
@@ -259,7 +272,6 @@ body {
 /* преимущества */
 
 .attractions-list {
-  /*  */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -269,14 +281,12 @@ body {
 }
 
 .attractions-item {
-  /*  */
   width: 400px;
   min-height: 385px;
   /* text-align: center; */
 }
 
 .attraction-text-wrapper {
-  /*  */
   align-self: center;
   padding: 113px 85px;
   position: relative;
@@ -284,7 +294,6 @@ body {
 
 .attraction-text-wrapper::before,
 .text-wrapper-img::before {
-  /*  */
   content: "";
   width: 58px;
   border: 2px solid rgba(0, 0, 0, 0.3);
@@ -293,32 +302,27 @@ body {
 }
 
 .attraction-text-wrapper::before {
-  /*  */
   top: 198px;
   left: 170px;
 }
 
 .text-wrapper-img::before {
-  /*  */
   top: 188px;
   left: 170px;
 }
 
 .text-wrapper-img {
-  /*  */
   padding-top: 102px;
   padding-bottom: 102px;
 }
 
 .attractions-devilis-bridge {
-  /*  */
   background-color: #82b3d3;
   color: #ffffff;
 }
 
 .attractions-real-images,
 .attractions-devilis-images {
-  /*  */
   display: flex;
   width: 100%;
   background-color: #82b3d3;
@@ -326,12 +330,10 @@ body {
 }
 
 .attractions-devilis-images {
-  /*  */
   flex-direction: row-reverse;
 }
 
 .attractions-title {
-  /*  */
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -343,19 +345,16 @@ body {
 }
 
 .attractions-text {
-  /*  */
   margin: 0;
 }
 
 .attractions-real-town-img,
 .attractions-devilis-bridge-img {
-  /*  */
   display: block;
 }
 
 .attractions-real-town-title,
 .attractions-devilis-bridge-title {
-  /*  */
   color: #ffffff;
 }
 
@@ -716,22 +715,6 @@ body {
   gap: 20px;
 }
 
-/* .social-icon{
-  fill:#83b3d3;
-}
-
-.social-toggle-vk:hover .social-icon,
-.social-toggle-vk:focus-visible .social-icon
-{
-  fill: #68a2ca;
-}
-
-.social-toggle-vk:active .social-icon{
-  fill: rgba(104, 162, 202, 0.3);
-} */
-
-
-
 /* каталог */
 .sedona-hotels-main {
   margin: 0 auto;
@@ -741,7 +724,7 @@ body {
   background-color: #ffffff;
   color: #333333;
   background-image: url("../images/filtr.jpg");
-  background-size: 1200px 412px auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 35px 70px 70px;
 }
@@ -756,6 +739,7 @@ body {
   line-height: 78px;
   color: #ffffff;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .sedona-hotels-list {
@@ -765,30 +749,51 @@ body {
   margin: 0;
   padding: 0;
   gap: 8px;
-  align-items: center;
   padding-bottom: 40px;
 }
-.sedona-hotels-home {
-  display: inline-block;
-  background-image:url("../images/home-vector.svg");
-  background-repeat: no-repeat;
-  background-position:left;
-  width: 13px;
-  height: 15px;
-}
-/* .sedona-hotels-list::before{
-  content: "";
-  display: block;
-  background-image:url("../images/photo-2.jpg");
-background-position: left;
-} */
 
+.sedona-hotels-link {
+  display: inline-block;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  align-self: center;
+  text-decoration: none;
+}
+
+.sedona-hotels-item {
+  position: relative;
+}
+
+.sedona-hotels-item:last-child::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  left: 2px;
+  top: 0;
+  background-image: url("../images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: center;
+}
+
+.sedona-hotels-home {
+  width: 12px;
+  height: 12px;
+}
+
+.sedona-hotels-item:last-child {
+  padding-left: 21px;
+}
 
 .sedona-hotels-form {
   width: 1060px;
   display: flex;
   justify-content: space-between;
-
   column-gap: 70px;
 }
 
@@ -858,15 +863,7 @@ background-position: left;
   border-radius: 0 4px 4px 0;
 }
 
-.sedona-hotels-link {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-}
+
 
 .hotels-filter-title {
   font-size: 20px;
