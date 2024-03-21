@@ -198,26 +198,20 @@ body {
   fill: #ffffff;
 }
 
-.header-sedona-navigation-button:hover,
-.header-sedona-navigation-button:focus-visible {
-  background-color: #615048;
-}
-
-.header-sedona-navigation-button:active {
-  background-color: #756157;
-  opacity: 0.3;
-}
-
 .header-sedona-navigation-button:disabled {
   background-color: #e5e5e5;
   cursor: auto;
+  opacity: 0.5;
 }
 
-.header-sedona-navigation-button disabled:hover,
-.header-sedona-navigation-button disabled:focus-visible,
-.header-sedona-navigation-button disabled:active {
-  background-color: #e5e5e5;
-  cursor: default;
+.header-sedona-navigation-button:not(:disabled):hover,
+.header-sedona-navigation-button:not(:disabled):focus-visible {
+  background-color: #615048;
+}
+
+.header-sedona-navigation-button:not(:disabled):active {
+  background-color: #756157;
+  opacity: 0.3;
 }
 
 /* основное содержание */
@@ -499,19 +493,23 @@ body {
   box-sizing: border-box;
 }
 
-.interested-link-button:visited {
+.interested-link-button:not([href]),
+.subscribe-button:disabled {
+  background-color: #e5e5e5;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.interested-link-button[href]:hover,
+.interested-link-button[href]:focus-visible {
   background-color: #615048;
 }
 
-.interested-link-button:hover {
-  background-color: #615048;
-}
-
-.interested-link-button:active {
+.interested-link-button[href]:active {
   background-color: #756157;
   opacity: 0.3;
-  color: rgba(255, 255, 255, 0.3);
 }
+
 
 /* подписаться на рассылку */
 
@@ -581,15 +579,12 @@ body {
   color: #ffffff;
 }
 
-.subscribe-button:visited {
+.subscribe-button:not(:disabled):hover,
+.subscribe-button:not(:disabled):focus-visible {
   background-color: #68a2ca;
 }
 
-.subscribe-button:hover {
-  background-color: #68a2ca;
-}
-
-.subscribe-button:active {
+.subscribe-button:not(:disabled):active {
   background-color: #82b3d3;
   opacity: 0.3;
 }
@@ -697,9 +692,14 @@ body {
   fill: #000000;
 }
 
-.sedona-autor-toggle:hover .autor-icon,
+.sedona-autor-toggle:hover .autor-icon {
+  fill: #756157;
+}
+
 .sedona-autor-toggle:focus-visible .autor-icon {
   fill: #756157;
+  border: 2px solid #000000;
+  border-radius: 4px;
 }
 
 .sedona-autor-toggle:active .autor-icon {
@@ -742,6 +742,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* хлебные крошки */
 .sedona-hotels-list {
   display: flex;
   flex-wrap: wrap;
@@ -790,6 +791,7 @@ body {
   padding-left: 21px;
 }
 
+/* Список услуг с фильтрами */
 .sedona-hotels-form {
   width: 1060px;
   display: flex;
@@ -863,8 +865,6 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-
-
 .hotels-filter-title {
   font-size: 20px;
   font-weight: 700;
@@ -921,6 +921,40 @@ body {
   cursor: pointer;
 }
 
+.hotels-button-apply:disabled {
+  background-color: #e5e5e5;
+  cursor: default;
+  opacity: 0.7;
+}
+
+.hotels-button-apply:not(:disabled):hover,
+.hotels-button-apply:not(:disabled):focus-visible {
+  background-color: #68a2ca;
+}
+
+.hotels-button-apply:not(:disabled):active {
+  background-color: #82b3d3;
+  opacity: 0.3;
+}
+
+.hotels-button-reset:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.hotels-button-reset:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+.hotels-button-reset:not(:disabled):focus-visible {
+  border: 3px solid #83b3d3;
+}
+
+.hotels-button-reset:not(:disabled):active {
+  opacity: 0.3;
+}
+
+/* Найдено гостиниц */
 .list-hotel {
   display: flex;
   flex-wrap: wrap;
@@ -950,7 +984,7 @@ body {
   bottom: 2px;
   border-radius: 4px;
 }
-
+/* Расположение отелей Седоны */
 .location-hotel {
   width: 160px;
 }
@@ -964,35 +998,49 @@ body {
   padding: 0;
 }
 
-.location-hotel-item {
+.location-hotel-link{
   width: 48px;
   min-height: 48px;
-  border-radius: 4px;
-  border: 2px solid #E5E5E5;
   background-repeat: no-repeat;
-  background-position: center;
-  box-sizing: border-box;
+background-position: center;
   cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5e5;
+  box-sizing: border-box;
+  z-index: 1;
 }
-
-.location-hotel-link {
-  width: 48px;
-  min-height: 48px;
-  background-position: center;
-}
-
-.location-hotel-activ {
+.activ {
   background-image: url("../images/button/view.svg");
-  border: 2px solid #000000;
 }
 
-.location-hotel-activ-one {
+.activ-one {
   background-image: url("../images/button/view-1.svg");
 }
 
-.location-hotel-activ-list {
+.activ-list {
   background-image: url("../images/button/view-2.svg");
 }
+.activ:disabled {
+  background-color: #e5e5e5;
+  cursor: default;
+  opacity: 0.3;
+}
+.activ:not(:disabled):hover{
+  border: 2 px solid #000000;
+  z-index: 2;
+}
+.activ:not(:disabled):focus-visible {
+  z-index: 3;
+  border: 2 px solid #68a2ca;
+}
+
+.activ:not(:disabled):active {
+  border: 2 px solid #000000;
+  z-index: 2;
+}
+
+
+
 
 /* список отелей карточек */
 .hotel-gallery {
