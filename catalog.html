@@ -77,6 +77,7 @@
               <a class="sedona-hotels-link hotels-link-arrow" href="catalog.html" aria-current="page">Гостиницы</a>
             </li>
           </ul>
+          <!-- Список услуг с фильтрами -->
           <section class="sedona-hotels" data-test="filter">
             <h2 class="visually-hidden">Список услуг с фильтрами</h2>
             <form class="sedona-hotels-form" id="filter-katalog" action="https://echo.htmlacademy.ru/" method="get">
@@ -84,34 +85,52 @@
                 <legend class="hotels-filter-title hotels-checkbox-title">Инфраструктура:</legend>
                 <ul class="hotel-list-filter hotels-checkbox-list">
                   <li class="hotel-item hotels-checkbox-item">
-                    <label class="hotels-checkbox-label" for="hotels-pool"><input class="hotels-checkbox-input"
-                        id="hotels-pool" type="checkbox" name="infrastructure-hotel" value="pool"
-                        checked>Бассейн</label>
+                    <label class="hotels-checkbox-label" for="hotels-pool"><input
+                        class="hotels-checkbox-input checked-input visually-hidden" id="hotels-pool" type="checkbox"
+                        name="hotels-pool" value="pool" checked>
+                      <span class="switch switch-checkbox"></span>
+                      <span class="label-name label-pool">Бассейн</span>
+                    </label>
                   </li>
                   <li class="hotel-item hotels-checkbox-item">
-                    <label class="hotels-checkbox-label" id="hotels-parking"><input class="hotels-checkbox-input"
-                        type="checkbox" name="infrastructure-hotel" value="parking" checked>Парковка</label>
+                    <label class="hotels-checkbox-label" id="hotels-parking"><input
+                        class="hotels-checkbox-input checked-input visually-hidden" type="checkbox"
+                        name="hotels-parking" value="parking" checked>
+                      <span class="switch switch-checkbox"></span>
+                      <span class="label-name label-parking">Парковка</span></label>
                   </li>
                   <li class="hotel-item hotels-checkbox-item">
-                    <label class="hotels-checkbox-label" for="hotels-wi-fi"><input class="hotels-checkbox-input"
-                        id="hotels-wi-fi" type="checkbox" name="infrastructure-hotel" value="wi-fi">Wi-Fi</label>
+                    <label class="hotels-checkbox-label" for="hotels-wi-fi"><input
+                        class="hotels-checkbox-input checked-input visually-hidden" id="hotels-wi-fi" type="checkbox"
+                        name="hotels-wi-fi" value="wi-fi">
+                      <span class="switch switch-checkbox"></span>
+                      <span class="label-name label-wifi">Wi-Fi</span></label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset class="hotels-grow hotels-radio-group">
-                <legend class="hotels-filter-title hotels-radio-title">Тип жилья:</legend>
+                <legend class="hotels-filter-title hotels-radio-title">Тип Жилья:</legend>
                 <ul class="hotel-list-filter hotels-radio-list">
                   <li class="hotel-item hotels-radio-item">
-                    <label class="hotels-radio-label" for="radio-hotel"><input class="hotels-radio-input"
-                        id="radio-hotel" type="radio" name="hotels" value="radio" checked>Гостиница</label>
+                    <label class="hotels-radio-label" for="hotels"><input
+                        class="hotels-radio-input checked-input visually-hidden" id="hotels" type="radio"
+                        name="type-housing" value="hotels" checked>
+                      <span class="switch switch-radio"></span>
+                      <span class="label-name"></span>Гостиница</label>
                   </li>
                   <li class="hotel-item hotels-radio-item">
-                    <label class="hotels-radio-label" for="radio-motel"><input class="hotels-radio-input"
-                        id="radio-motel" type="radio" name="hotels" value="motel">Мотель</label>
+                    <label class="hotels-radio-label" for="motel"><input
+                        class="hotels-radio-input checked-input visually-hidden" id="motel" type="radio"
+                        name="type-housing" value="motel">
+                      <span class="switch switch-radio"></span>
+                      <span class="label-name"></span>Мотель</label>
                   </li>
                   <li class="hotel-item hotels-radio-item">
-                    <label class="hotels-radio-label" for="radio-apartments"><input class="hotels-radio-input"
-                        id="radio-apartments" type="radio" name="hotels" value="apartments">Апартаменты</label>
+                    <label class="hotels-radio-label" for="apartments"><input
+                        class="hotels-radio-input checked-input visually-hidden" id="apartments" type="radio"
+                        name="type-housing" value="apartments">
+                      <span class="switch switch-radio"></span>
+                      <span class="label-name">Апартаменты</span></label>
                   </li>
                 </ul>
               </fieldset>
@@ -123,12 +142,21 @@
                   <label class="hotels-price-price hotels-price-do" for="price-do">до</label>
                   <input class="hotels-input-do" id="price-do" type="number" placeholder="9000">
                 </div>
+                <div class="slider">
+                  <div class="slider-wrapper">
+                    <button class="range-bar slider-min"> <span class="visually-hidden">Ползунок минимальной
+                        цены.</span></button>
+                    <button class="range-bar slider-max"><span class="visually-hidden">Ползунок максимальной
+                        цены.</span></button>
+                  </div>
+                </div>
               </fieldset>
               <div class="hotels-button-wrapper">
                 <button class="hotels-button-filter hotels-button-apply" type="submit"
                   for="filter-katalog">Применить</button>
                 <button class="hotels-button-filter hotels-button-reset" type="reset"
-                  for="filter-katalog" >Сбросить</button>
+                  for="filter-katalog">Сбросить</button>
+
               </div>
             </form>
           </section>
@@ -146,18 +174,18 @@
             <ul class="location-hotel-list">
               <li class="location-hotel-item">
                 <span class="visually-hidden">Расположение отелей по вертикали в три ряда</span>
-                <button class="location-hotel-link activ" type="button" >
-                  </button>
+                <button class="location-hotel-link activ" type="button">
+                </button>
               </li>
               <li class="location-hotel-item">
                 <span class="visually-hidden">Расположение отелей в один ряд</span>
                 <button class="location-hotel-link activ-one" type="button">
-                 </button>
+                </button>
               </li>
               <li class="location-hotel-item">
                 <span class="visually-hidden">Расположение отелей по горизонтали в строку</span>
-                <button class="location-hotel-link activ-list" type="button" >
-                  </button>
+                <button class="location-hotel-link activ-list" type="button">
+                </button>
               </li>
             </ul>
           </div>
