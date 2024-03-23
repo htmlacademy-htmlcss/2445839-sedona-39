@@ -1088,7 +1088,7 @@ color: rgba(255, 255, 255, 0.3);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 51px 70px 38px;
+  padding: 51px 70px 39px;
   align-items: center;
 }
 
@@ -1263,7 +1263,6 @@ color: rgba(255, 255, 255, 0.3);
 
 .hotel-gallery-span {
   width: 140px;
-
 }
 
 .hotel-gallery-prise {
