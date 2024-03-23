@@ -25,13 +25,10 @@
               <a class="header-sedona-navigation-link hotel-open-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-
-
-
           <ul class="header-sedona-navigation-list header-sedona-icon">
             <li class="header-sedona-navigation-item navigation-search-icon">
               <a class="header-sedona-navigation-link navigation-search-link" href="#">
-                <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="18"
+                <svg aria-hidden="true" focusable="false" role="img" aria-label="иконка поиска"xmlns="http://www.w3.org/2000/svg" width="18"
                   height="18" viewBox="0 0 18 18">
                   <path
                     d="m18.5 17-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87A8 8 0 0 0 8.5.5C4.1.5.5 4.18.5 8.56a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" />
@@ -64,7 +61,7 @@
           <h1 class="sedona-hotels-title">Гостиницы Седоны</h1>
           <ul class="sedona-hotels-list">
             <li class="sedona-hotels-item sedona-hotels-home">
-              <a class="sedona-hotels-link " href="index.html">
+              <a class="sedona-hotels-link" href="index.html">
                 <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="13"
                   height="15" viewBox="0 0 13 15" fill="currentColor">
                   <path d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" />
@@ -74,7 +71,7 @@
               </a>
             </li>
             <li class="sedona-hotels-item">
-              <a class="sedona-hotels-link hotels-link-arrow" href="catalog.html" aria-current="page">Гостиницы</a>
+              <a class="sedona-hotels-link hotels-link-arrow" aria-current="page">Гостиницы</a>
             </li>
           </ul>
           <!-- Список услуг с фильтрами -->
@@ -134,13 +131,13 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="hotels-price">
+              <fieldset class="price">
                 <legend class="hotels-filter-title hotels-price-title">Стоимость, ₽:</legend>
-                <div class="hotel-price-input-wrapper">
-                  <label class="hotels-price-price hotels-price-ot" for="price-ot">от</label>
-                  <input class="hotels-input-ot" id="price-ot" type="number" placeholder="0">
-                  <label class="hotels-price-price hotels-price-do" for="price-do">до</label>
-                  <input class="hotels-input-do" id="price-do" type="number" placeholder="9000">
+                <div class="price-wrapper">
+                  <label class="price-label price-ot" for="price-ot">от</label>
+                  <input class="input-ot" id="price-ot" type="number" placeholder="0">
+                  <label class="price-label price-do" for="price-do">до</label>
+                  <input class="input-do" id="price-do" type="number" placeholder="9000">
                 </div>
                 <div class="slider">
                   <div class="slider-wrapper">
@@ -156,11 +153,11 @@
                   for="filter-katalog">Применить</button>
                 <button class="hotels-button-filter hotels-button-reset" type="reset"
                   for="filter-katalog">Сбросить</button>
-
               </div>
             </form>
           </section>
         </div>
+        <!-- Расположение отелей Седоны -->
         <section class="list-hotel" data-test="catalog">
           <h2 class="list-hotel-title">
             Найдено гостиниц:<span class="list-hotel-namber">38</span>
@@ -190,6 +187,7 @@
             </ul>
           </div>
         </section>
+        <!-- список отелей карточек -->
         <section class="hotel-gallery">
           <h2 class="visually-hidden">Рейтинг отелей</h2>
           <ul class="hotel-gallery-list">
@@ -222,7 +220,7 @@
                 <span class="hotel-gallery-span">Гостиница</span>
                 <b class="hotel-gallery-prise">От 5000 ₽</b>
                 <a class="hotel-gallery-button-link" href="#">Подробнее</a>
-                <button class="hotel-gallery-button gallery-button-open" type="button">
+                <button class="hotel-gallery-button gallery-button-favorites" type="button">
                   В избранном
                 </button>
                 <p class="hotel-gallery-stars numbers-four-star">
@@ -295,10 +293,10 @@
         </section>
         <section class="subscribe subscribe-width" data-test="subscribe">
           <div class="subscribe-wrapp">
-            <h2 class="subscribe-title subscribe-color-title">Подпишитесь на рассылку</h2>
-            <p class="subscribe-text subscribe-color-text">
-              Только полезная информация и никакого спама, честное бойскаутское!
-            </p>
+          <h2 class="subscribe-title subscribe-color-title">Подпишитесь на рассылку</h2>
+          <p class="subscribe-text subscribe-color-text">
+            Только полезная информация и никакого спама, честное бойскаутское!
+          </p>
           </div>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-form">Укажите ваш email</label>

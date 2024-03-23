@@ -64,10 +64,14 @@ body {
   opacity: 0.8;
 }
 
-.header-sedona-logotip:hover img {
+.header-sedona-logotip:hover img,
+.header-sedona-logotip:focus-visible img {
   opacity: 0.8;
 }
 
+.header-sedona-logotip:active img {
+  opacity: 0.5;
+}
 
 .header-sedona-navigation {
   width: 1060px;
@@ -134,7 +138,7 @@ body {
   margin: 0 auto;
 }
 
-.navigation-heart-icon {
+.navigation-heart-buttom {
   position: relative;
 }
 
@@ -145,9 +149,7 @@ body {
   cursor: pointer;
 }
 
-.navigation-search-link,
-.navigation-heart-buttom {
-  position: relative;
+.navigation-search-link {
   fill: #000000;
 }
 
@@ -159,7 +161,6 @@ body {
   font-weight: 400;
   line-height: 10px;
   color: #ffffff;
-  align-items: start;
   background-color: #7DB54F;
   padding: 5px;
   border-radius: 50%;
@@ -186,16 +187,19 @@ body {
   cursor: pointer;
 }
 
-
 .header-sedona-navigation-link:hover {
-  background-color: #615048;
-  opacity: 0.8;
+  color: #615048;
+  fill: #615048;
+}
+.header-sedona-navigation-button:hover{
   color: #ffffff;
 }
+.header-sedona-navigation-link:focus-visible {
+  outline: 2px solid #615048;
+}
 
-.navigation-search-link:hover,
-.navigation-heart-buttom:hover {
-  fill: #ffffff;
+.header-sedona-navigation-link:active {
+  opacity: 0.5;
 }
 
 .header-sedona-navigation-button:disabled {
@@ -290,7 +294,8 @@ body {
 .text-wrapper-img::before {
   content: "";
   width: 58px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
   align-items: center;
   position: absolute;
 }
@@ -763,14 +768,27 @@ body {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
-
   text-decoration: none;
 }
-.sedona-hotels-link svg{
-vertical-align: middle;
+
+.sedona-hotels-link svg {
+  vertical-align: middle;
 }
+
 .sedona-hotels-item {
   position: relative;
+}
+
+.sedona-hotels-link[href]:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sedona-hotels-link[href]:focus-visible {
+  color: #ffffff;
+}
+
+.sedona-hotels-link[href]:active {
+color: rgba(255, 255, 255, 0.3);
 }
 
 .sedona-hotels-item:last-child::before {
@@ -830,18 +848,18 @@ vertical-align: middle;
   margin-bottom: 0;
 }
 
-.hotels-checkbox-label, .hotels-radio-label {
+.hotels-checkbox-label,
+.hotels-radio-label {
   position: relative;
   display: block;
   cursor: pointer;
 }
 
-.switch{
+.switch {
   position: absolute;
   width: 20px;
   height: 20px;
   background-color: #ffffff;
-  align-items: center;
 }
 
 .switch-checkbox {
@@ -852,6 +870,10 @@ vertical-align: middle;
   border-radius: 50%;
 }
 
+.label-name {
+  margin-left: 36px;
+}
+
 .checked-input:checked + .switch::before {
   content: "";
   position: absolute;
@@ -859,18 +881,33 @@ vertical-align: middle;
   height: 10px;
   top: 5px;
   left: 4px;
+  display: block;
 }
+
 .checked-input:checked + .switch-checkbox::before {
   background-image: url("../images/checbox.svg");
 }
+
 .checked-input:checked + .switch-radio::before {
   background-image: url("../images/circle.svg");
 }
-.label-name {
-  margin-left: 36px;
+
+.checked-input:hover + .switch {
+  box-shadow: rgba(0, 0, 0, 0.25);
+  opacity: 0.7;
 }
 
-.hotels-price {
+.checked-input:focus-visible + .switch {
+  outline: 3px solid #83b3d3;
+}
+
+.checked-input:active + .switch {
+  outline: 2px solid rgba(131, 179, 211, 1);
+  opacity: 0.4;
+}
+
+/* стоимость */
+.price {
   max-width: 288px;
   margin: 0;
   padding: 0;
@@ -879,7 +916,14 @@ vertical-align: middle;
   margin-right: 70px;
 }
 
-.hotel-price-input-wrapper {
+.hotels-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.price-wrapper {
   display: grid;
   grid-template-columns: 143px 143px;
   gap: 2px;
@@ -887,7 +931,7 @@ vertical-align: middle;
   position: relative;
 }
 
-.hotels-price-price + input {
+.price-label + input {
   padding: 12px 40px 12px 20px;
   font-family: inherit;
   font-size: inherit;
@@ -899,49 +943,49 @@ vertical-align: middle;
   box-sizing: border-box;
 }
 
-.hotels-price-price {
+.price-label {
   position: absolute;
   text-align: center;
   color: #000000;
   opacity: 0.2;
 }
 
-
-.hotels-price-ot {
+.price-ot {
   left: 105px;
   top: 12px;
 }
 
-.hotels-price-do {
+.price-do {
   left: 248px;
   top: 12px;
 }
 
-.hotels-input-ot {
+.input-ot {
   border-radius: 4px 0 0 4px;
 }
 
-.hotels-input-do {
+.input-do {
   border-radius: 0 4px 4px 0;
 }
 
-.hotels-filter-title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: 32px;
+.price-label + input:hover {
+  background-color: #e6e6e6;
 }
 
+.price-label + input:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+/* слайдер */
 .slider-wrapper,
 .slider {
-  width: 287px;
   height: 4px;
   margin-top: 42px;
 }
 
 .slider {
   background-color: rgba(255, 255, 255, 0.3);
-
+  width: 287px;
 }
 
 .slider-wrapper {
@@ -968,6 +1012,7 @@ vertical-align: middle;
   right: 0;
 }
 
+/* кнопки переключения */
 .hotels-button-wrapper {
   display: grid;
   grid-template-columns: 191px;
@@ -999,7 +1044,6 @@ vertical-align: middle;
 
 .hotels-button-reset {
   margin: 0 auto;
-  outline: none;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1031,7 +1075,7 @@ vertical-align: middle;
 }
 
 .hotels-button-reset:not(:disabled):focus-visible {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .hotels-button-reset:not(:disabled):active {
@@ -1044,21 +1088,23 @@ vertical-align: middle;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 53px 70px 40px;
+  padding: 51px 70px 38px;
   align-items: center;
 }
 
 .list-hotel-title {
   margin: 0;
   text-transform: uppercase;
-font-size: 30px;
-font-weight: 700;
-line-height: 36px;
-color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
 }
-.list-hotel-namber{
+
+.list-hotel-namber {
   margin-left: 8px;
 }
+
 .list-sorting {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -1154,9 +1200,6 @@ color: #000000;
   outline: 2px solid #000000;
 }
 
-
-
-
 /* список отелей карточек */
 .hotel-gallery {
   padding: 0 70px;
@@ -1190,7 +1233,7 @@ color: #000000;
   row-gap: 16px;
 }
 
-.hotel-gallery-link-img img{
+.hotel-gallery-link-img img {
   display: block;
   width: 300px;
   grid-column: 1/-1;
@@ -1210,7 +1253,6 @@ color: #000000;
   text-transform: none;
   margin: 16px 0;
   grid-column: 1/-1;
-
 }
 
 .hotel-gallery-span,
@@ -1275,9 +1317,42 @@ color: #000000;
   background-color: #756157;
 }
 
-.gallery-button-open {
+.gallery-button-favorites {
   background-color: #7db54f;
   padding: 8px 17px;
+}
+.hotel-gallery-button:disabled,
+.hotel-gallery-button-link:not([href]){
+  background-color: rgba(229, 229, 229, 1);
+  opacity: 0.3;
+  cursor: default;
+}
+
+.hotel-gallery-button-link[href]:hover,
+.hotel-gallery-button-link[href]:focus-visible{
+  background-color: #615048;
+}
+.hotel-gallery-button-link[href]:active{
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-gallery-button:not(:disabled):hover,
+.hotel-gallery-button:not(:disabled):focus-visible{
+  background-color: #68a2ca;
+}
+.hotel-gallery-button:not(:disabled):active{
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.gallery-button-favorites:not(:disabled):hover,
+.gallery-button-favorites:not(:disabled):focus-visible{
+  background-color: rgba(108, 158, 66, 1);
+}
+.gallery-button-favorites:not(:disabled):active{
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-gallery-stars {
@@ -1300,20 +1375,21 @@ color: #000000;
   border-radius: 4px;
 }
 
-
 /* пагинация */
 .pagination-hotel {
   padding: 80px 70px 60px;
   position: relative;
 }
+
 .pagination-hotel::before {
   content: "";
-position: absolute;
+  position: absolute;
   width: 1060px;
-height: 1px;
-background-color: #e6e6e6;
-top: 40px;
+  height: 1px;
+  background-color: #e6e6e6;
+  top: 40px;
 }
+
 .pagination-hotel-list {
   display: flex;
   flex-wrap: wrap;
@@ -1351,4 +1427,14 @@ top: 40px;
 .pagination-open-link {
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.pagination-hotel-link[href]:hover,
+.pagination-hotel-link[href]:focus-visible {
+  background-color: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-hotel-link[href]:active {
+  opacity: 0.5;
 }
