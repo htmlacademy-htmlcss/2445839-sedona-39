@@ -191,9 +191,11 @@ body {
   color: #615048;
   fill: #615048;
 }
-.header-sedona-navigation-button:hover{
+
+.header-sedona-navigation-button:hover {
   color: #ffffff;
 }
+
 .header-sedona-navigation-link:focus-visible {
   outline: 2px solid #615048;
 }
@@ -720,6 +722,315 @@ body {
   gap: 20px;
 }
 
+/* попап */
+.madal-container {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  width: 717px;
+  height: 576px;
+  position: relative;
+  margin: 0 auto;
+  padding: 70px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 20px;
+  top: 70px;
+  right: 70px;
+  background-image: url("../images/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+}
+.modal-close-button:hover{
+  background-color: #e6e6e6;
+}
+.modal-close-button:focus-visible{
+  outline: 3px solid #83b3d3;
+}
+.modal-close-button:active{
+opacity: 0.5;
+}
+.modal-search {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-search-title {
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0 0 64px 0;
+  padding: 0;
+}
+
+.modal-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.modal-item {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 23px;
+}
+
+.label-input {
+  width: 137px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 12px 0;
+  margin: 0;
+  position: relative;
+}
+
+.label-arrival::before,
+.label-departure::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-input {
+  box-sizing: border-box;
+  width: 440px;
+  min-height: 48px;
+  margin: 0;
+  display: inline-block;
+  margin-left: 20px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  padding: 12px 0 12px 20px;
+}
+
+.modal-input::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+}
+
+.modal-text {
+  width: 371px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  display: block;
+  text-align: center;
+  padding-right: 69px;
+  margin-left: auto;
+}
+
+.modal-error {
+  width: 320px;
+  color: #ff5757;
+  padding-right: 120px;
+}
+
+.departure-input {
+  margin-left: 15px;
+}
+
+.modal--list {
+  display: grid;
+  grid-template-columns: 247px 247px;
+  justify-content: space-between;
+}
+
+.input-adults,
+.input-children {
+  width: 31px;
+  height: 48px;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+
+.modal-sorting {
+  display: flex;
+}
+
+.button-wrapper {
+  box-sizing: border-box;
+  width: 111px;
+  margin: 0;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 40px 31px 40px;
+  background-color: #f2f2f2;
+  margin-left: auto;
+}
+
+.button-input {
+  width: 40px;
+  padding: 0;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-input::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 2px;
+  height: 14px;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.button-input::before {
+  transform: rotate(90deg);
+}
+
+.button-input::after {
+  transform: rotate(-180deg);
+}
+.button-input:hover,
+.modal-input:hover{
+  opacity: 1;
+}
+.button-input:focus-visible,
+.modal-input:focus-visible{
+ outline: 3px solid #82b3d3;
+ border-radius: 4px;
+}
+.button-input:active,
+.modal-input:active{
+opacity: 0.2;
+}
+.modal-find {
+  width: 100%;
+  margin-top: 25px;
+  padding: 18px;
+  border-radius: 10px;
+  background-color: #83b3d3;
+  border: none;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.modal-find:hover,
+.modal-find:focus-visible{
+background-color: #68a2ca;
+}
+
+.modal-find:active{
+opacity: 0.5;
+}
+/* тулпит */
+.toolpit {
+  position: absolute;
+  right: 231px;
+  bottom: 175px;
+}
+
+.toolpit-toggle {
+  border: none;
+  background-color: #83b3d3;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #ffffff;
+  align-content: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin-right: auto;
+}
+
+.toolpit-toggle:hover,
+.toolpit-toggle:active {
+  opacity: 0.8;
+}
+
+.toolpit-toggle:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.toolpit-text {
+  position: absolute;
+  bottom: 46px;
+  left: 49%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  width: 256px;
+  background-color: #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 18px;
+  box-sizing: border-box;
+  z-index: 1;
+  display: none;
+}
+
+.toolpit-text::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -11px;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 19px;
+  height: 9px;
+  background-image: url("../images/corner.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.toolpit:hover + .toolpit-text,
+.toolpit:focus + .toolpit-text{
+  display: block;
+}
 /* каталог */
 .sedona-hotels-main {
   margin: 0 auto;
@@ -788,7 +1099,7 @@ body {
 }
 
 .sedona-hotels-link[href]:active {
-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .sedona-hotels-item:last-child::before {
@@ -916,6 +1227,16 @@ color: rgba(255, 255, 255, 0.3);
   margin-right: 70px;
 }
 
+.input-ot::-webkit-outer-spin-button,
+.input-ot::-webkit-inner-spin-button,
+.input-do::-webkit-outer-spin-button,
+.input-do::-webkit-inner-spin-button,
+.modal-input::-webkit-outer-spin-button,
+.modal-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .hotels-filter-title {
   font-size: 20px;
   font-weight: 700;
@@ -989,7 +1310,6 @@ color: rgba(255, 255, 255, 0.3);
 }
 
 .slider-wrapper {
-  width: 227px;
   background-color: #ffffff;
   position: relative;
 }
@@ -1115,7 +1435,7 @@ color: rgba(255, 255, 255, 0.3);
   margin-left: auto;
   appearance: none;
   margin-right: 70px;
-  padding: 13px 36px 13px 20px;
+  padding: 13px 46px 13px 20px;
   background-image: url("../images/selected.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -1320,36 +1640,40 @@ color: rgba(255, 255, 255, 0.3);
   background-color: #7db54f;
   padding: 8px 17px;
 }
+
 .hotel-gallery-button:disabled,
-.hotel-gallery-button-link:not([href]){
+.hotel-gallery-button-link:not([href]) {
   background-color: rgba(229, 229, 229, 1);
   opacity: 0.3;
   cursor: default;
 }
 
 .hotel-gallery-button-link[href]:hover,
-.hotel-gallery-button-link[href]:focus-visible{
+.hotel-gallery-button-link[href]:focus-visible {
   background-color: #615048;
 }
-.hotel-gallery-button-link[href]:active{
+
+.hotel-gallery-button-link[href]:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-gallery-button:not(:disabled):hover,
-.hotel-gallery-button:not(:disabled):focus-visible{
+.hotel-gallery-button:not(:disabled):focus-visible {
   background-color: #68a2ca;
 }
-.hotel-gallery-button:not(:disabled):active{
+
+.hotel-gallery-button:not(:disabled):active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .gallery-button-favorites:not(:disabled):hover,
-.gallery-button-favorites:not(:disabled):focus-visible{
+.gallery-button-favorites:not(:disabled):focus-visible {
   background-color: rgba(108, 158, 66, 1);
 }
-.gallery-button-favorites:not(:disabled):active{
+
+.gallery-button-favorites:not(:disabled):active {
   background-color: #7db54f;
   color: rgba(255, 255, 255, 0.3);
 }
