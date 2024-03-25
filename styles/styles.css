@@ -746,7 +746,7 @@ body {
   background-color: #ffffff;
   z-index: 2;
   box-sizing: border-box;
-  margin-top: 6%;
+  margin-top:6%;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
@@ -754,7 +754,7 @@ body {
   position: absolute;
   padding: 20px;
   top: 70px;
-  right: 70px;
+  right: 53px;
   background-image: url("../images/cross.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -811,6 +811,7 @@ body {
 
 .label-input {
   max-width: 137px;
+  min-height: 24px;
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
@@ -828,7 +829,7 @@ body {
   height: 20px;
   position: absolute;
   top: 16px;
-  right: 14px;
+  right: 20px;
   background-image: url("../images/date.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -840,12 +841,12 @@ body {
   min-height: 48px;
   margin: 0;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 18px;
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
   margin-bottom: 4px;
-  padding: 12px 0 12px 20px;
+  padding: 12px 55px  12px 20px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -878,12 +879,12 @@ body {
 }
 
 .departure-input {
-  margin-left: 15px;
+  margin-left: 13px;
 }
 
 .modal--list {
   display: grid;
-  grid-template-columns: 247px 247px;
+  grid-template-columns: 247px 242px;
   justify-content: space-between;
 }
 
@@ -1012,8 +1013,8 @@ body {
 }
 .tooltip {
   display: block;
-  top: 12px;
-  left: 10px;
+  top: 9px;
+  left: 11px;
   position: absolute;
 }
 
@@ -1044,7 +1045,7 @@ body {
 .tooltip-text {
   position: absolute;
   top: 40px;
-  left: -108px;
+  left: -117px;
   bottom: 100%;
   font-family: inherit;
   font-size: 16px;
@@ -1053,21 +1054,22 @@ body {
   text-align: left;
   width: 256px;
   min-height: 143px;
+  flex-wrap: wrap;
   background-color: #333333;
   border-radius: 10px;
   color: #ffffff;
-  padding: 18px;
+  padding: 22px;
   box-sizing: border-box;
   z-index: 1;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  display: none;
+  /* display: none; */
 }
 
 .tooltip-text::after {
   content: "";
   position: absolute;
   top: -8px;
-  left: -11px;
+  left: 0;
   right: 0;
   bottom:100%;
   margin-left: auto;
