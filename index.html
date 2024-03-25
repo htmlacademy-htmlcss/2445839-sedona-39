@@ -229,7 +229,7 @@
         </div>
       </footer>
       <!-- попап -->
-      <div class="madal-container">
+      <div class="madal-container open-modal">
         <div class="modal modal-auth">
           <button class="modal-close-button">
             <span class="visually-hidden">Закрыть</span></button>
@@ -240,14 +240,14 @@
                 <li class="modal-item">
                   <label class="label-input label-arrival" for="arrival">Дата заезда:
                     <input class="modal-input arrival-input" id="arrival" type="text" name="arrival"
-                      placeholder="27 апреля 2020">
-                    <span class="modal-text modal-error">Мы не можем отправить вас в прошлое.</span>
+                     value="27 апреля 2020" placeholder="27 апреля 2020"  required>
+                    <span class="modal-text modal-warrning">Мы не можем отправить вас в прошлое.</span>
                   </label>
                 </li>
                 <li class="modal-item">
                   <label class="label-input label-departure" for="departure">Дата выезда:
                     <input class="modal-input departure-input" id="departure" type="text" name="departure"
-                      placeholder="1 сентября 2023">
+                    value="1 сентября 2023" placeholder="1 сентября 2023" required>
                     <span class="modal-text">На эти даты есть свободные номера. Пока есть.</span>
                   </label>
                 </li>
@@ -255,10 +255,15 @@
                   <li class="modal-item modal-sorting">
                     <label class="label-input modal-title" for="modal-adults">Взрослые:</label>
                     <div class="button-wrapper">
-                      <button class="button-input minus" type="button"></button>
+                      <button class="button-input minus" type="button">
+                        <span class="visually-hidden">Уменьшить количество взрослых.</span>
+                      </button>
                       <input class="modal-input input-adults" id="modal-adults" name="adults" type="number"
-                        placeholder="2">
-                      <button class="button-input plus" type="button"></button>
+                       value="2" placeholder="2" required>
+                      <button class="button-input plus" type="button">
+                        <span class="visually-hidden">Увеличить количество взрослых. </span>
+                      </button>
+                    </div>
                   </li>
                   <li class="modal-item modal-sorting">
                     <label class="label-input modal-children" for="modal-children">Дети: </label>
@@ -266,13 +271,18 @@
                     <span class="toolpit">
                       <button class="toolpit-toggle" type="button" aria-labelledby="toolpit-label-data">i</button>
                     </span>
-                      <span class="toolpit-text" role="tooltip" id="toolpit-label-data">Укажите количество детей, которые будут с вами, возраст которых от 6 до
-                        18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                    <span class="toolpit-text" role="tooltip" id="toolpit-label-data">Укажите количество детей, которые
+                      будут с вами, возраст которых от 6 до
+                      18 лет. Дети до 6 лет размещаются бесплатно.</span>
                     <div class="button-wrapper">
-                      <button class="button-input minus" type="button"></button><input
+                      <button class="button-input minus" type="button">
+                        <span class="visually-hidden">Уменьшить количество детей.</span>
+                      </button><input
                         class="modal-input input-children" id="modal-children" type="number" name="children"
-                        placeholder="2">
-                      <button class="button-input plus" type="button"></button>
+                       value="2" placeholder="2">
+                      <button class="button-input plus" type="button">
+                        <span class="visually-hidden">Увеличить количество детей.</span>
+                      </button>
                     </div>
                   </li>
                 </ul>

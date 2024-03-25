@@ -60,7 +60,6 @@ body {
 
 .header-sedona-logotip {
   margin-bottom: -10px;
-  z-index: 1;
   opacity: 0.8;
 }
 
@@ -167,7 +166,6 @@ body {
   position: absolute;
   top: 11px;
   left: 20px;
-  z-index: 1;
 }
 
 .header-sedona-navigation-button {
@@ -724,15 +722,17 @@ body {
 
 /* попап */
 .madal-container {
+  display: none;
   position: fixed;
-  display: flex;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
 }
-
+/* .open-modal{
+  display: block;
+} */
 .modal {
   width: 717px;
   height: 576px;
@@ -743,6 +743,8 @@ body {
   background-color: #ffffff;
   z-index: 2;
   box-sizing: border-box;
+  margin-top: 6%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .modal-close-button {
@@ -760,15 +762,19 @@ body {
   border-radius: 50%;
   border: none;
 }
-.modal-close-button:hover{
+
+.modal-close-button:hover {
   background-color: #e6e6e6;
 }
-.modal-close-button:focus-visible{
+
+.modal-close-button:focus-visible {
   outline: 3px solid #83b3d3;
 }
-.modal-close-button:active{
-opacity: 0.5;
+
+.modal-close-button:active {
+  opacity: 0.5;
 }
+
 .modal-search {
   border: none;
   margin: 0;
@@ -784,6 +790,8 @@ opacity: 0.5;
   text-transform: uppercase;
   margin: 0 0 64px 0;
   padding: 0;
+  padding-right: 70px;
+  flex-wrap: wrap;
 }
 
 .modal-list {
@@ -799,7 +807,7 @@ opacity: 0.5;
 }
 
 .label-input {
-  width: 137px;
+  max-width: 137px;
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
@@ -807,6 +815,7 @@ opacity: 0.5;
   padding: 12px 0;
   margin: 0;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .label-arrival::before,
@@ -834,14 +843,16 @@ opacity: 0.5;
   border-radius: 4px;
   margin-bottom: 4px;
   padding: 12px 0 12px 20px;
-}
-
-.modal-input::placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  opacity: 0.6;
+}
+
+.modal-input::placeholder {
   color: #000000;
+  opacity: 0.5;
 }
 
 .modal-text {
@@ -854,9 +865,10 @@ opacity: 0.5;
   text-align: center;
   padding-right: 69px;
   margin-left: auto;
+  flex-wrap: wrap;
 }
 
-.modal-error {
+.modal-warrning {
   width: 320px;
   color: #ff5757;
   padding-right: 120px;
@@ -897,7 +909,8 @@ opacity: 0.5;
 }
 
 .button-input {
-  width: 40px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   border: none;
   display: inline-block;
@@ -905,14 +918,16 @@ opacity: 0.5;
   background-color: transparent;
   cursor: pointer;
   position: relative;
+  align-self: center;
+  justify-self: center;
 }
 
 .button-input::before,
 .plus::after {
   content: "";
   position: absolute;
-  top: 18px;
-  left: 18px;
+  top: 4px;
+  left: 9px;
   width: 2px;
   height: 14px;
   background-color: #000000;
@@ -926,19 +941,42 @@ opacity: 0.5;
 .button-input::after {
   transform: rotate(-180deg);
 }
-.button-input:hover,
-.modal-input:hover{
+
+.modal-input:not(:disabled):hover {
+  background-color: #f2f2f2;
+  opacity: 0.7;
+  color: #000000;
+}
+
+.button-input:not(:disabled):hover::before,
+.button-input:not(:disabled):hover::after {
+  background-color: #000000;
   opacity: 1;
 }
-.button-input:focus-visible,
-.modal-input:focus-visible{
- outline: 3px solid #82b3d3;
- border-radius: 4px;
+
+.button-input:not(:disabled):focus-visible,
+.modal-input:not(:disabled):focus-visible {
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  opacity: 1;
 }
-.button-input:active,
-.modal-input:active{
-opacity: 0.2;
+
+.button-input:not(:disabled):active::before,
+.button-input:not(:disabled):active::after {
+  opacity: 0.3;
 }
+
+.modal-input:not(:disabled):active {
+  opacity: 0.7;
+}
+
+.button-input:disabled,
+.modal-input:disabled {
+  background-color: #f2f2f2;
+  opacity: 0.3;
+  cursor: default;
+}
+
 .modal-find {
   width: 100%;
   margin-top: 25px;
@@ -955,14 +993,16 @@ opacity: 0.2;
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .modal-find:hover,
-.modal-find:focus-visible{
-background-color: #68a2ca;
+.modal-find:focus-visible {
+  background-color: #68a2ca;
 }
 
-.modal-find:active{
-opacity: 0.5;
+.modal-find:active {
+  opacity: 0.5;
 }
+
 /* тулпит */
 .toolpit {
   position: absolute;
@@ -1027,10 +1067,12 @@ opacity: 0.5;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .toolpit:hover + .toolpit-text,
-.toolpit:focus + .toolpit-text{
+.toolpit:focus + .toolpit-text {
   display: block;
 }
+
 /* каталог */
 .sedona-hotels-main {
   margin: 0 auto;
