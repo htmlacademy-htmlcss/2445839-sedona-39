@@ -1281,7 +1281,12 @@ body {
   appearance: none;
   margin: 0;
 }
-
+.input-ot,
+.input-ot,
+.input-children,
+.input-adults{
+  appearance: textfield;
+}
 .hotels-filter-title {
   font-size: 20px;
   font-weight: 700;
