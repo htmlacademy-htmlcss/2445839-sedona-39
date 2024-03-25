@@ -235,59 +235,58 @@
             <span class="visually-hidden">Закрыть</span></button>
           <fieldset class="modal-search">
             <legend class="modal-search-title">Поиск гостиницы в Седоне</legend>
-            <form action="" method="post">
+            <form action="https://echo.htmlacademy.ru/" method="post">
               <ul class="modal-list">
                 <li class="modal-item">
                   <label class="label-input label-arrival" for="arrival">Дата заезда:
                     <input class="modal-input arrival-input" id="arrival" type="text" name="arrival"
-                     value="27 апреля 2020" placeholder="27 апреля 2020"  required>
+                      value="27 апреля 2020" placeholder="27 апреля 2020" required>
                     <span class="modal-text modal-warrning">Мы не можем отправить вас в прошлое.</span>
                   </label>
                 </li>
                 <li class="modal-item">
                   <label class="label-input label-departure" for="departure">Дата выезда:
                     <input class="modal-input departure-input" id="departure" type="text" name="departure"
-                    value="1 сентября 2023" placeholder="1 сентября 2023" required>
+                      value="1 сентября 2023" placeholder="1 сентября 2023" required>
                     <span class="modal-text">На эти даты есть свободные номера. Пока есть.</span>
                   </label>
                 </li>
-                <ul class="modal-list modal--list">
-                  <li class="modal-item modal-sorting">
-                    <label class="label-input modal-title" for="modal-adults">Взрослые:</label>
-                    <div class="button-wrapper">
-                      <button class="button-input minus" type="button">
-                        <span class="visually-hidden">Уменьшить количество взрослых.</span>
-                      </button>
-                      <input class="modal-input input-adults" id="modal-adults" name="adults" type="number"
-                       value="2" placeholder="2" required>
-                      <button class="button-input plus" type="button">
-                        <span class="visually-hidden">Увеличить количество взрослых. </span>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="modal-item modal-sorting">
-                    <label class="label-input modal-children" for="modal-children">Дети: </label>
-                    <!-- тулпит -->
-                    <span class="toolpit">
-                      <button class="toolpit-toggle" type="button" aria-labelledby="toolpit-label-data">i</button>
-                    </span>
-                    <span class="toolpit-text" role="tooltip" id="toolpit-label-data">Укажите количество детей, которые
-                      будут с вами, возраст которых от 6 до
-                      18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                    <div class="button-wrapper">
-                      <button class="button-input minus" type="button">
-                        <span class="visually-hidden">Уменьшить количество детей.</span>
-                      </button><input
-                        class="modal-input input-children" id="modal-children" type="number" name="children"
-                       value="2" placeholder="2">
-                      <button class="button-input plus" type="button">
-                        <span class="visually-hidden">Увеличить количество детей.</span>
-                      </button>
-                    </div>
-                  </li>
-                </ul>
-                <button class="modal-find" type="submit">Найти</button>
               </ul>
+              <ul class="modal-list modal--list">
+                <li class="modal-item modal-sorting">
+                  <label class="label-input modal-title" for="modal-adults">Взрослые:</label>
+                  <div class="button-wrapper">
+                    <button class="button-input minus" type="button">
+                      <span class="visually-hidden">Уменьшить количество взрослых.</span>
+                    </button>
+                    <input class="modal-input input-adults" id="modal-adults" name="adults" type="number" value="2"
+                      placeholder="2" required>
+                    <button class="button-input plus" type="button">
+                      <span class="visually-hidden">Увеличить количество взрослых. </span>
+                    </button>
+                  </div>
+                </li>
+                <li class="modal-item modal-sorting">
+                  <label class="label-input modal-children" for="modal-children">Дети: </label>
+                  <!-- тулпит -->
+                  <span class="toolpit">
+                    <button class="toolpit-toggle" type="button" aria-labelledby="toolpit-label-data">i</button>
+                  </span>
+                  <span class="toolpit-text" role="tooltip" id="toolpit-label-data">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до
+                    18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  <div class="button-wrapper">
+                    <button class="button-input minus" type="button">
+                      <span class="visually-hidden">Уменьшить количество детей.</span>
+                    </button><input class="modal-input input-children" id="modal-children" type="number" name="children"
+                      value="2" placeholder="2">
+                    <button class="button-input plus" type="button">
+                      <span class="visually-hidden">Увеличить количество детей.</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <button class="modal-find" type="submit">Найти</button>
             </form>
           </fieldset>
         </div>
