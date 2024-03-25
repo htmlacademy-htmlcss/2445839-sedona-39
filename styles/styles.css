@@ -1006,14 +1006,18 @@ body {
   opacity: 0.5;
 }
 
-/* тулпит */
-.toolpit {
+/* тултип */
+.tooltip-wrapper{
+  position: relative;
+}
+.tooltip {
+  display: block;
+  top: 12px;
+  left: 10px;
   position: absolute;
-  right: 231px;
-  bottom: 175px;
 }
 
-.toolpit-toggle {
+.tooltip-toggle {
   border: none;
   background-color: #83b3d3;
   width: 26px;
@@ -1028,40 +1032,44 @@ body {
   margin-right: auto;
 }
 
-.toolpit-toggle:hover,
-.toolpit-toggle:active {
+.tooltip-toggle:hover,
+.tooltip-toggle:active {
   opacity: 0.8;
 }
 
-.toolpit-toggle:focus {
+.tooltip-toggle:focus {
   outline: 2px solid #83b3d3;
 }
 
-.toolpit-text {
+.tooltip-text {
   position: absolute;
-  bottom: 46px;
-  left: 49%;
+  top: 40px;
+  left: -108px;
+  bottom: 100%;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
   width: 256px;
-  background-color: #000000;
+  min-height: 143px;
+  background-color: #333333;
   border-radius: 10px;
   color: #ffffff;
   padding: 18px;
   box-sizing: border-box;
   z-index: 1;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   display: none;
 }
 
-.toolpit-text::after {
+.tooltip-text::after {
   content: "";
   position: absolute;
   top: -8px;
   left: -11px;
   right: 0;
+  bottom:100%;
   margin-left: auto;
   margin-right: auto;
   width: 19px;
@@ -1071,8 +1079,8 @@ body {
   background-position: center;
 }
 
-.toolpit:hover + .toolpit-text,
-.toolpit:focus + .toolpit-text {
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
 
