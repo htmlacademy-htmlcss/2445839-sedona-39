@@ -251,7 +251,7 @@ body {
 .greeting-wrapper {
   width: 651px;
   margin: 0 auto;
-  padding: 69px 0 90px;
+  padding: 69px 0 69px;
 }
 
 .greetings-title {
@@ -280,6 +280,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 21px;
 }
 
 .attraction-text-wrapper {
