@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="./favicon.ico/favicon-32x32.png">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -243,10 +245,10 @@
       <!-- попап -->
       <div class="madal-container open-modal">
         <div class="modal modal-auth">
-          <button class="modal-close-button">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span></button>
-          <fieldset class="modal-search">
-            <legend class="modal-search-title">Поиск гостиницы в Седоне</legend>
+          <div class="modal-search">
+            <h2 class="modal-search-title">Поиск гостиницы в Седоне</h2>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <ul class="modal-list">
                 <li class="modal-item">
@@ -303,7 +305,7 @@
               </ul>
               <button class="modal-find" type="submit">Найти</button>
             </form>
-          </fieldset>
+          </div>
         </div>
       </div>
     </div>
