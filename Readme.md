@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Кристина Т](https://up.htmlacademy.ru/htmlcss/39/user/2445839).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra)
+* Сайт: [проект SEDONA](https://kristinatarantsova.github.io/2445839-sedona-39/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
