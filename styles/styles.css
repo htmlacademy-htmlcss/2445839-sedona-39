@@ -632,8 +632,8 @@ body {
 .sedona-footer {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   gap: 30px;
+  text-align: center;
   padding: 43px 70px 40px;
 }
 
