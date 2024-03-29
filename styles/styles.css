@@ -251,7 +251,7 @@ body {
 .greeting-wrapper {
   width: 651px;
   margin: 0 auto;
-  padding: 69px 0 69px;
+  padding: 69px 0 90px;
 }
 
 .greetings-title {
@@ -262,6 +262,7 @@ body {
   text-transform: uppercase;
   min-height: 72px;
   margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .greetings-text {
@@ -280,7 +281,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 21px;
 }
 
 .attraction-text-wrapper {
@@ -288,7 +288,7 @@ body {
   min-height: 385px;
   box-sizing: border-box;
   text-align: center;
-  padding: 113px 85px;
+  padding: 113px 85px 112px 85px;
 }
 
 .attractions-title {
@@ -310,11 +310,18 @@ body {
   content: "";
   width: 58px;
   height: 2px;
-  background-color: rgba(0, 0, 0, 0.3);
   align-items: center;
   position: absolute;
-  top: -32px;
-  left: 85px;
+  top: -33px;
+  left: 86px;
+}
+
+.attractions-text::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.attraction--text::before {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .text-wrapper-img {
@@ -427,7 +434,6 @@ body {
 .advantages-souvenirs {
   background-color: rgba(131, 179, 211, 0.12);
   background-image: url("../images/souvenirs.svg");
-
 }
 
 .advantages-wrapper {
@@ -457,7 +463,7 @@ body {
 /* призыв к действию  */
 
 .interested {
-  padding: 96px 0;
+  padding: 96px 0 95px 0;
   width: 592px;
   margin: 0 auto;
 }
@@ -525,7 +531,7 @@ body {
   color: #333333;
   text-align: center;
   margin: 0 auto;
-  padding: 96px 0 105px;
+  padding: 96px 0 104px;
 }
 
 .subscribe-title {
@@ -546,7 +552,7 @@ body {
 .subscribe-images {
   background-image: url("../images/subscribe.jpg");
   background-color: rgba(131, 179, 211, 0.8);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
 }
@@ -684,13 +690,17 @@ body {
   fill: rgba(104, 162, 202, 0.3);
 }
 
-.social-icon {
+.social-icon,
+.autor-icon {
   position: absolute;
-  top: 10px;
   right: 0;
   left: 0;
   bottom: 0;
   margin: 0 auto;
+}
+
+.social-icon {
+  top: 10px;
 }
 
 .sedona-autor {
@@ -700,12 +710,7 @@ body {
 }
 
 .autor-icon {
-  position: absolute;
   top: 5px;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: 0 auto;
 }
 
 .sedona-autor-toggle {
@@ -719,7 +724,7 @@ body {
 
 .sedona-autor-toggle:focus-visible .autor-icon {
   fill: #756157;
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
   border-radius: 4px;
 }
 
@@ -729,7 +734,7 @@ body {
 
 .sedona-phone {
   font-style: normal;
- width: 700px;
+  width: 700px;
   min-height: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -754,7 +759,7 @@ body {
   position: relative;
   margin: auto;
   margin-top: 89px;
-  padding:62px 70px;
+  padding: 62px 70px;
   border-radius: 30px;
   background-color: #ffffff;
   z-index: 2;
@@ -878,7 +883,6 @@ body {
   padding-right: 69px;
   margin-left: auto;
   flex-wrap: wrap;
-
 }
 
 .modal-warrning {
@@ -1275,7 +1279,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-left: 5px;
+  left: 5px;
 }
 
 .checked-input:not(:disabled):hover + .switch {
@@ -1427,6 +1431,20 @@ left: 5px;
   right: 0;
 }
 
+.range-bar:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-bar:focus-visible {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  border: 3px solid #83b3d3;
+}
+
+.range-bar:active {
+  box-shadow: 0 7px 15px 0 #00000066;
+  border: 2px solid #83b3d3
+}
+
 /* кнопки переключения */
 .hotels-button-wrapper {
   display: grid;
@@ -1532,7 +1550,7 @@ left: 5px;
   margin-left: auto;
   margin-right: 70px;
   padding: 13px 46px 13px 20px;
- background-color: #ffffff;
+  background-color: #ffffff;
   background-image: url("../images/selected.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -1673,6 +1691,27 @@ left: 5px;
   text-transform: none;
   margin: 16px 0;
   grid-column: 1/-1;
+}
+
+.hotel-gallery-link-img:hover {
+  opacity: 0.8;
+}
+
+.hotel-gallery-link-img:focus-visible {
+  box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.25);
+}
+
+.hotel-gallery-link-img:active {
+  opacity: 0.5;
+}
+
+.hotel-gallery-link[href]:hover .hotel-gallery-title,
+.hotel-gallery-link[href]:focus-visible .hotel-gallery-title {
+  color: #756157;
+}
+
+.hotel-gallery-link[href]:active .hotel-gallery-title {
+  opacity: 0.5;
 }
 
 .hotel-gallery-span,
