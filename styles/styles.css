@@ -1420,6 +1420,7 @@ body {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .slider-max,
@@ -1431,18 +1432,19 @@ body {
   right: 0;
 }
 
-.range-bar:hover {
+.range-bar:not(:disabled):hover {
+  background-color:#e6e6e6;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.range-bar:focus-visible {
+.range-bar:not(:disabled):focus-visible {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   border: 3px solid #83b3d3;
 }
 
-.range-bar:active {
+.range-bar:not(:disabled):active {
   box-shadow: 0 7px 15px 0 #00000066;
-  border: 2px solid #83b3d3
+  border: 2px solid #83b3d3;
 }
 
 /* кнопки переключения */
